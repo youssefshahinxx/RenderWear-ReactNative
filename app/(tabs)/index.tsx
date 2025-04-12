@@ -71,20 +71,20 @@ export default function Index() {
                     showsVerticalScrollIndicator={false}
                     contentContainerStyle={{paddingBottom: 20}}>
             {/* Featured Banner */}
-            <View className="bg-[#F0F0F0] rounded-xl mx-5 mt-20 p-5">
+            {/* <View className="bg-[#F0F0F0] rounded-xl mx-5 mt-20 p-5">
                 <Text className="text-dark-200 text-xl font-bold mb-2">
                 Welcome, Creative!
                 </Text>
                 <Text className="text-dark-200 opacity-90">
                     Transform your ideas into stunning visuals with our AI-powered tool
                 </Text>
-            </View>
+            </View> */}
 
             
             <View className="flex-1 align-center justify-center mr-10">
             </View>
 
-            <View className="flex-1 align-center justify-center mx-4 pt-5  mr-10">
+            <View className="flex-1 align-center justify-center mx-4 mt-10 pt-5  mr-10">
                 <Image source={icons.girl} className="w-[393px] h-[430px]" resizeMode="cover"/>
             </View>
 
