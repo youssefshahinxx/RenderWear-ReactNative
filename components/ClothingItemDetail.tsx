@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, Image, TouchableOpacity, ScrollView, Dimensions, InteractionManager } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ScrollView, Dimensions, InteractionManager, Modal } from 'react-native';
 import { ClothingItem, ClothingItemDetailProps } from '@/interfaces/clothing';
 import ClothingPasswordModal from './ClothingPasswordModal';
 import ClothingDeleteConfirmationModal from './ClothingDeleteConfirmationModal';
@@ -26,8 +26,8 @@ const ClothingItemDetail: React.FC<ClothingItemDetailProps> = ({ item, onClose, 
       setActionType('edit');
       // If the item doesn't have a password, proceed directly
       if (!item.password) {
-        handleEditAction();
-      } else {
+      //   handleEditAction();
+      // } else {
         setPasswordModalVisible(true);
       }
     }
@@ -120,9 +120,9 @@ const ClothingItemDetail: React.FC<ClothingItemDetailProps> = ({ item, onClose, 
     <View className="flex-1 bg-black/80">
       {/* Optimized close button with hitSlop for larger touch area */}
       <TouchableOpacity 
-        className="absolute top-10 right-5 z-10 w-10 h-10 rounded-full bg-white items-center justify-center"
+        className="absolute top-10 right-5 z-20 w-10 h-10 rounded-full bg-white items-center justify-center"
         onPress={handleClose}
-        activeOpacity={0.7}
+        activeOpacity={1}
         hitSlop={{ top: 15, right: 15, bottom: 15, left: 15 }}
         disabled={isProcessing}
       >

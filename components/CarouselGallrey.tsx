@@ -14,7 +14,7 @@ const CarouselGallrey = () => {
 
     const [activeSlide, setActiveSlide] = useState(0);
     const renderCarouselItem = ({ item }: { item: typeof carouselData[0] }) => (
-        <View className="bg-primary rounded-xl overflow-hidden w-[360px] h-[350px] justify-center items-center">
+        <View className="bg-primary rounded-xl overflow-hidden w-[360px] h-[290px] justify-center items-center">
             <Image 
                 source={item.image} 
                 className="w-[200px] h-full" 
@@ -28,15 +28,16 @@ const CarouselGallrey = () => {
     );
 
     return(
-    <View className="mb-4 mt-6">
-                <Text className="text-xl font-bold text-dark-100">
-                    Discover AI Magic
-                </Text>
+    <View className="mb-4 mt-10">
+                <Text className="text-[30px] mb-1 font-bold justify-center text-center text-dark-100">
+                AI-Powered Outfit Generation </Text>
+                <Text className="text-light-300 justify-center mx-5 text-center mt-1"> Whether you're a stylist looking to experiment or a fashion enthusiast exploring new trends, we enable you to visualize and perfect your style before making any choices.</Text>
+ 
                 <View className="items-center">
                     <Carousel
                         loop
                         width={360}
-                        height={290}
+                        height={240}
                         autoPlay={true}
                         data={carouselData}
                         scrollAnimationDuration={5000}

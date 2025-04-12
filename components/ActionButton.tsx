@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, View } from 'react-native';// or any icon set y
 
 const ActionButton = ({ icon = 'add', label = 'Try now' }) => {
     return (
-        <View className='flex-1 justify-center items-center mt-6'>
+        <View className='flex-1 justify-center items-center mt-10'>
             <TouchableOpacity 
                 className="bg-secondary p-4 rounded-full shadow-lg items-center justify-center"
                 >

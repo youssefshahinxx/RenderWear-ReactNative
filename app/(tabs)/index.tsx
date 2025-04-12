@@ -43,7 +43,7 @@ export default function Index() {
         };
 
         return (
-            <View className="mb-4 border border-primary rounded-xl">
+            <View className="mb-4 border border-primary bg-[#F0F0F0] rounded-xl">
                 <TouchableOpacity 
                     onPress={toggleDropdown} 
                     className="flex-row items-center justify-between p-4"
@@ -65,68 +65,97 @@ export default function Index() {
     };
 
     return (
-    <View className="flex-1 bg-primary mb-10">
-        <ScrollView className="flex-1 px-5"
+    <View className="flex-1 bg-primary mb-10 pb-10">
+        
+        <ScrollView className="flex-1"
                     showsVerticalScrollIndicator={false}
                     contentContainerStyle={{paddingBottom: 20}}>
-        <Image source={icons.logo} className="w-[180px] h-[70px] mt-20 mb-5 mx-auto"/>
-
-            {/* Welcome Message */}
-            <View className="mb-6">
-                <Text className="text-2xl font-bold text-dark-100">
-                    Welcome, Creative!
-                </Text>
-                <Text className="text-light-300 mt-1">
-                    Ready to transform your imagination into reality?
-                </Text>
-            </View>
-
             {/* Featured Banner */}
-            <View className="bg-secondary rounded-xl p-5 mb-2">
-                <Text className="text-white text-xl font-bold mb-2">
-                    Unleash Your Creativity
+            <View className="bg-[#F0F0F0] rounded-xl mx-5 mt-20 p-5">
+                <Text className="text-dark-200 text-xl font-bold mb-2">
+                Welcome, Creative!
                 </Text>
-                <Text className="text-white opacity-90">
+                <Text className="text-dark-200 opacity-90">
                     Transform your ideas into stunning visuals with our AI-powered tool
                 </Text>
             </View>
 
-            {/* AI Features Carousel */}
-            <CarouselGallrey/>
+            
+            <View className="flex-1 align-center justify-center mr-10">
+            </View>
 
-            {/* Image
-            <View className="mb-0 mt-10 items-center">
-                <Image 
-                    source={icons.person} 
-                    className="w-[300px] h-[200px] rounded-xl" 
-                    resizeMode="cover"
-                /></View> */}
+            <View className="flex-1 align-center justify-center mx-4 pt-5  mr-10">
+                <Image source={icons.girl} className="w-[393px] h-[430px]" resizeMode="cover"/>
+            </View>
 
-            {/* AI Features */}
-            <View className="mt-6">
+            <View className="mt-2 mx-5">
                 <Text className="text-[30px] mb-1 font-bold justify-center text-center text-dark-100">
                 What Do We Do?    
                 </Text>
                 <Text className="text-dark-100 mb-1 justify-center text-center">We blend creativity and technology to revolutionize virtual styling.</Text>
-                <Text className="text-light-300 mt-1">Our app takes curated actor images and a handpicked collection of clothing pieces, then uses the power of AI to generate realistic visuals of your chosen actor wearing your selected outfits. Whether you're a stylist looking to experiment or a fashion enthusiast exploring new trends, we enable you to visualize and perfect your style before making any choices.</Text>
+                <Text className="text-light-300 mt-1 justify-center text-center">Our app takes curated actor images and a handpicked collection of clothing pieces, then uses the power of AI to generate realistic visuals of your chosen actor wearing your selected outfits. </Text>
             </View>
+            
+                {/* Action Button */}
+            <ActionButton label="Get Started" />
 
-            {/* Action Button */}
-            <ActionButton label="Visualize Now" />
+            <View className="mt-10">
+            </View>
+            
+            {/* <View className="mt-10 mx-5">
+                <Text className="text-[30px] font-bold text-center text-dark-100 mb-4">
+                    AI-Powered Outfit Generation
+                </Text>
+                <Text className="text-light-300 text-center mb-8">
+                    Instantly create unique outfit designs{'\n'}Style Anytime, Anywhere!
+                </Text>
+                <View className="flex-row justify-between px-4">
+                    <View className="items-center">
+                        <Image source={icons.person} className="w-12 h-12 mb-2" resizeMode="contain" />
+                        <Text className="text-dark-100 text-center text-sm">Fashion{'\n'}Enthusiasts</Text>
+                    </View>
+                    <View className="items-center">
+                        <Image source={icons.untitled} className="w-12 h-12 mb-2" resizeMode="contain" />
+                        <Text className="text-dark-100 text-center text-sm">Production{'\n'}Teams</Text>
+                    </View>
+                    <View className="items-center">
+                        <Image source={icons.starb} className="w-12 h-12 mb-2" resizeMode="contain" />
+                        <Text className="text-dark-100 text-center text-sm">Everyone{'\n'}Else</Text>
+                    </View>
+                </View>
+            </View> */}
 
+            {/* AI Features Carousel */}
+            <CarouselGallrey/>
+
+
+            {/* AI Features */}
+            
+
+            <View className="flex-1 align-center justify-center mt-10 mr-10">
+            </View>
+            <View className=" mt-10">
+                <Text className="text-[30px] mb-1 font-bold justify-center text-center text-dark-100">
+                Revolutionizing Try-On Experiences   
+                </Text>
+                {/* <Text className="text-dark-100 mb-1 justify-center text-center">We blend creativity and technology</Text> */}
+                <Text className="text-light-300 mt-1 justify-center shadow-l text-center">Create, customize, and try-on outfits in real time using advanced AI technologies.</Text>
+            </View>
             {/* Collection Cards */}
-            {/* <Image source={images.nbg} className=" w-full z-0"/> */}
             <CollectionComponent/>
 
             {/* Dropdown Features */}
-            <View className="mb-10 mt-6">
-                <Text className="text-xl font-bold text-dark-100 ">
+            <View className="mb-10 mt-6 mx-5">
+                <Text className="text-xl mb-4 font-bold text-dark-100 ">
                 How It Works: Your Virtual Styling
                 </Text>
                 {dropdownData.map((item) => (
                     <DropdownItem key={item.id} item={item} />
                 ))}
             </View>   
+
+            {/* Target Users Section */}
+            
         </ScrollView>
     </View>
   );
